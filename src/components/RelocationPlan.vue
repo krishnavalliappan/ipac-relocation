@@ -42,37 +42,39 @@ const planItems = [
 </script>
 
 <template>
-  <div class="h-full flex flex-col justify-center max-w-4xl mx-auto px-4 py-8 space-y-6">
+  <div class="h-screen flex flex-col max-w-7xl mx-auto px-4 py-4 overflow-y-auto">
     <!-- Title Section -->
-    <div class="text-center mb-8">
-      <h2 class="text-3xl font-bold text-primary">Relocation Plan 🏠</h2>
+    <div class="text-center mb-4">
+      <h2 class="text-3xl sm:text-4xl font-bold text-primary">Relocation Plan 🏠</h2>
       <p class="text-muted-foreground mt-2">Answers to Your Questions</p>
     </div>
 
     <!-- Bento Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-y-auto">
-      <template v-for="(item, index) in planItems" :key="index">
-        <Card 
-          :class="[
-            'transition-all duration-300 hover:-translate-y-1',
-            {
-              'md:col-span-2': item.size === 'large',
-              'row-span-2': item.size === 'large',
-              'md:col-span-2': item.size === 'medium'
-            }
-          ]"
-        >
-          <CardHeader>
-            <CardTitle class="flex items-center gap-2">
-              <span class="text-2xl">{{ item.icon }}</span>
-              {{ item.title }}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p class="text-muted-foreground">{{ item.content }}</p>
-          </CardContent>
-        </Card>
-      </template>
+    <div class="flex-grow overflow-y-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(150px,auto)] pb-4">
+        <template v-for="(item, index) in planItems" :key="index">
+          <Card 
+            :class="[
+              'transition-all duration-300 hover:-translate-y-1 h-full',
+              {
+                'sm:row-span-2': item.size === 'large',
+                'sm:col-span-2 lg:col-span-2': item.size === 'medium',
+                'flex flex-col': true
+              }
+            ]"
+          >
+            <CardHeader class="pb-3">
+              <CardTitle class="flex items-center gap-2 text-lg">
+                <span class="text-2xl">{{ item.icon }}</span>
+                {{ item.title }}
+              </CardTitle>
+            </CardHeader>
+            <CardContent class="flex-grow">
+              <p class="text-muted-foreground">{{ item.content }}</p>
+            </CardContent>
+          </Card>
+        </template>
+      </div>
     </div>
   </div>
 </template>
