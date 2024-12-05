@@ -1,0 +1,5 @@
+whatever you are using Try to use from Shadcn ui library for vue, if nots possible create and use.
+
+I want this website to use styling from tailwind only, and so simple not too complex animation works. 
+
+This is fast paced website building, make as much as realitsic possible that human can do within a day.
