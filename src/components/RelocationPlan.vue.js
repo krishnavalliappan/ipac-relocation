@@ -58,12 +58,13 @@ function __VLS_template() {
     // CSS variable injection 
     // CSS variable injection end 
     let __VLS_resolvedLocalAndGlobalComponents;
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("h-screen flex flex-col max-w-7xl mx-auto px-4 py-4 overflow-y-auto") }, });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("text-center mb-4") }, });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({ ...{ class: ("text-3xl sm:text-4xl font-bold text-primary") }, });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({ ...{ class: ("text-muted-foreground mt-2") }, });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("flex-grow overflow-y-auto") }, });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(150px,auto)] pb-4") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("flex items-center justify-center min-h-screen px-4 py-8") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("flex flex-col items-center w-full gap-8 max-w-7xl") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("text-center") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.h2, __VLS_intrinsicElements.h2)({ ...{ class: ("text-3xl font-bold sm:text-4xl text-primary") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({ ...{ class: ("mt-2 text-muted-foreground") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("flex-grow w-full") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(150px,auto)]") }, });
     for (const [item, index] of __VLS_getVForSourceType((__VLS_ctx.planItems))) {
         const __VLS_0 = __VLS_resolvedLocalAndGlobalComponents.Card;
         /** @type { [typeof __VLS_components.Card, typeof __VLS_components.Card, ] } */
@@ -113,31 +114,33 @@ function __VLS_template() {
         __VLS_nonNullable(__VLS_5.slots).default;
         var __VLS_5;
     }
-    __VLS_styleScopedClasses['h-screen'];
+    __VLS_styleScopedClasses['flex'];
+    __VLS_styleScopedClasses['items-center'];
+    __VLS_styleScopedClasses['justify-center'];
+    __VLS_styleScopedClasses['min-h-screen'];
+    __VLS_styleScopedClasses['px-4'];
+    __VLS_styleScopedClasses['py-8'];
     __VLS_styleScopedClasses['flex'];
     __VLS_styleScopedClasses['flex-col'];
+    __VLS_styleScopedClasses['items-center'];
+    __VLS_styleScopedClasses['w-full'];
+    __VLS_styleScopedClasses['gap-8'];
     __VLS_styleScopedClasses['max-w-7xl'];
-    __VLS_styleScopedClasses['mx-auto'];
-    __VLS_styleScopedClasses['px-4'];
-    __VLS_styleScopedClasses['py-4'];
-    __VLS_styleScopedClasses['overflow-y-auto'];
     __VLS_styleScopedClasses['text-center'];
-    __VLS_styleScopedClasses['mb-4'];
     __VLS_styleScopedClasses['text-3xl'];
-    __VLS_styleScopedClasses['sm:text-4xl'];
     __VLS_styleScopedClasses['font-bold'];
+    __VLS_styleScopedClasses['sm:text-4xl'];
     __VLS_styleScopedClasses['text-primary'];
-    __VLS_styleScopedClasses['text-muted-foreground'];
     __VLS_styleScopedClasses['mt-2'];
+    __VLS_styleScopedClasses['text-muted-foreground'];
     __VLS_styleScopedClasses['flex-grow'];
-    __VLS_styleScopedClasses['overflow-y-auto'];
+    __VLS_styleScopedClasses['w-full'];
     __VLS_styleScopedClasses['grid'];
     __VLS_styleScopedClasses['grid-cols-1'];
     __VLS_styleScopedClasses['sm:grid-cols-2'];
     __VLS_styleScopedClasses['lg:grid-cols-3'];
     __VLS_styleScopedClasses['gap-4'];
     __VLS_styleScopedClasses['auto-rows-[minmax(150px,auto)]'];
-    __VLS_styleScopedClasses['pb-4'];
     __VLS_styleScopedClasses['transition-all'];
     __VLS_styleScopedClasses['duration-300'];
     __VLS_styleScopedClasses['hover:-translate-y-1'];

@@ -1,6 +1,7 @@
 import { ref, onMounted } from 'vue';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { GithubIcon } from 'lucide-vue-next';
 const { defineProps, defineSlots, defineEmits, defineExpose, defineModel, defineOptions, withDefaults, } = await import('vue');
 const emit = defineEmits(['navigate-to-map', 'navigate-to-relocation']);
 const displayText = ref('');
@@ -38,12 +39,13 @@ function __VLS_template() {
     // CSS variable injection 
     // CSS variable injection end 
     let __VLS_resolvedLocalAndGlobalComponents;
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("h-screen flex flex-col justify-center max-w-7xl mx-auto px-4 py-8 space-y-6") }, });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("text-center mb-8") }, });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.h1, __VLS_intrinsicElements.h1)({ ...{ class: ("text-4xl sm:text-5xl font-bold text-primary") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("flex items-center justify-center min-h-screen px-4 py-8") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("flex flex-col items-center justify-center w-full gap-8 max-w-7xl") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("pt-20 text-center sm:pt-0") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.h1, __VLS_intrinsicElements.h1)({ ...{ class: ("text-3xl font-bold break-words sm:text-4xl md:text-5xl text-primary") }, });
     (__VLS_ctx.displayText);
     __VLS_elementAsFunction(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({ ...{ class: ("cursor") }, });
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("grid grid-cols-1 lg:grid-cols-2 gap-4 auto-rows-[minmax(150px,auto)]") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("grid w-full grid-cols-1 gap-6 px-4 lg:grid-cols-2 sm:px-6") }, });
     const __VLS_0 = __VLS_resolvedLocalAndGlobalComponents.Card;
     /** @type { [typeof __VLS_components.Card, typeof __VLS_components.Card, ] } */
     // @ts-ignore
@@ -134,12 +136,12 @@ function __VLS_template() {
     var __VLS_71;
     __VLS_nonNullable(__VLS_53.slots).default;
     var __VLS_53;
-    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("mt-4 flex justify-center gap-4") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("flex flex-col items-center justify-center w-full gap-3 sm:flex-row sm:gap-8") }, });
     const __VLS_72 = __VLS_resolvedLocalAndGlobalComponents.Button;
     /** @type { [typeof __VLS_components.Button, typeof __VLS_components.Button, ] } */
     // @ts-ignore
-    const __VLS_73 = __VLS_asFunctionalComponent(__VLS_72, new __VLS_72({ ...{ 'onClick': {} }, variant: ("default"), }));
-    const __VLS_74 = __VLS_73({ ...{ 'onClick': {} }, variant: ("default"), }, ...__VLS_functionalComponentArgsRest(__VLS_73));
+    const __VLS_73 = __VLS_asFunctionalComponent(__VLS_72, new __VLS_72({ ...{ 'onClick': {} }, variant: ("default"), ...{ class: ("flex-1 sm:flex-initial px-6 max-w-[200px]") }, }));
+    const __VLS_74 = __VLS_73({ ...{ 'onClick': {} }, variant: ("default"), ...{ class: ("flex-1 sm:flex-initial px-6 max-w-[200px]") }, }, ...__VLS_functionalComponentArgsRest(__VLS_73));
     let __VLS_78;
     const __VLS_79 = {
         onClick: (...[$event]) => {
@@ -153,8 +155,8 @@ function __VLS_template() {
     const __VLS_80 = __VLS_resolvedLocalAndGlobalComponents.Button;
     /** @type { [typeof __VLS_components.Button, typeof __VLS_components.Button, ] } */
     // @ts-ignore
-    const __VLS_81 = __VLS_asFunctionalComponent(__VLS_80, new __VLS_80({ ...{ 'onClick': {} }, variant: ("secondary"), }));
-    const __VLS_82 = __VLS_81({ ...{ 'onClick': {} }, variant: ("secondary"), }, ...__VLS_functionalComponentArgsRest(__VLS_81));
+    const __VLS_81 = __VLS_asFunctionalComponent(__VLS_80, new __VLS_80({ ...{ 'onClick': {} }, variant: ("outline"), ...{ class: ("flex-1 sm:flex-initial px-6 max-w-[200px]") }, }));
+    const __VLS_82 = __VLS_81({ ...{ 'onClick': {} }, variant: ("outline"), ...{ class: ("flex-1 sm:flex-initial px-6 max-w-[200px]") }, }, ...__VLS_functionalComponentArgsRest(__VLS_81));
     let __VLS_86;
     const __VLS_87 = {
         onClick: (...[$event]) => {
@@ -165,27 +167,49 @@ function __VLS_template() {
     let __VLS_84;
     __VLS_nonNullable(__VLS_85.slots).default;
     var __VLS_85;
-    __VLS_styleScopedClasses['h-screen'];
+    const __VLS_88 = __VLS_resolvedLocalAndGlobalComponents.Button;
+    /** @type { [typeof __VLS_components.Button, typeof __VLS_components.Button, ] } */
+    // @ts-ignore
+    const __VLS_89 = __VLS_asFunctionalComponent(__VLS_88, new __VLS_88({ variant: ("outline"), asChild: (true), ...{ class: ("flex-1 sm:flex-initial px-6 max-w-[200px]") }, }));
+    const __VLS_90 = __VLS_89({ variant: ("outline"), asChild: (true), ...{ class: ("flex-1 sm:flex-initial px-6 max-w-[200px]") }, }, ...__VLS_functionalComponentArgsRest(__VLS_89));
+    __VLS_elementAsFunction(__VLS_intrinsicElements.a, __VLS_intrinsicElements.a)({ href: ("https://github.com/krishnavalliappan/ipac-relocation"), target: ("_blank"), rel: ("noopener noreferrer"), ...{ class: ("flex items-center justify-center gap-2") }, });
+    const __VLS_94 = __VLS_resolvedLocalAndGlobalComponents.GithubIcon;
+    /** @type { [typeof __VLS_components.GithubIcon, ] } */
+    // @ts-ignore
+    const __VLS_95 = __VLS_asFunctionalComponent(__VLS_94, new __VLS_94({ size: ((16)), }));
+    const __VLS_96 = __VLS_95({ size: ((16)), }, ...__VLS_functionalComponentArgsRest(__VLS_95));
+    __VLS_nonNullable(__VLS_93.slots).default;
+    var __VLS_93;
     __VLS_styleScopedClasses['flex'];
-    __VLS_styleScopedClasses['flex-col'];
+    __VLS_styleScopedClasses['items-center'];
     __VLS_styleScopedClasses['justify-center'];
-    __VLS_styleScopedClasses['max-w-7xl'];
-    __VLS_styleScopedClasses['mx-auto'];
+    __VLS_styleScopedClasses['min-h-screen'];
     __VLS_styleScopedClasses['px-4'];
     __VLS_styleScopedClasses['py-8'];
-    __VLS_styleScopedClasses['space-y-6'];
+    __VLS_styleScopedClasses['flex'];
+    __VLS_styleScopedClasses['flex-col'];
+    __VLS_styleScopedClasses['items-center'];
+    __VLS_styleScopedClasses['justify-center'];
+    __VLS_styleScopedClasses['w-full'];
+    __VLS_styleScopedClasses['gap-8'];
+    __VLS_styleScopedClasses['max-w-7xl'];
+    __VLS_styleScopedClasses['pt-20'];
     __VLS_styleScopedClasses['text-center'];
-    __VLS_styleScopedClasses['mb-8'];
-    __VLS_styleScopedClasses['text-4xl'];
-    __VLS_styleScopedClasses['sm:text-5xl'];
+    __VLS_styleScopedClasses['sm:pt-0'];
+    __VLS_styleScopedClasses['text-3xl'];
     __VLS_styleScopedClasses['font-bold'];
+    __VLS_styleScopedClasses['break-words'];
+    __VLS_styleScopedClasses['sm:text-4xl'];
+    __VLS_styleScopedClasses['md:text-5xl'];
     __VLS_styleScopedClasses['text-primary'];
     __VLS_styleScopedClasses['cursor'];
     __VLS_styleScopedClasses['grid'];
+    __VLS_styleScopedClasses['w-full'];
     __VLS_styleScopedClasses['grid-cols-1'];
+    __VLS_styleScopedClasses['gap-6'];
+    __VLS_styleScopedClasses['px-4'];
     __VLS_styleScopedClasses['lg:grid-cols-2'];
-    __VLS_styleScopedClasses['gap-4'];
-    __VLS_styleScopedClasses['auto-rows-[minmax(150px,auto)]'];
+    __VLS_styleScopedClasses['sm:px-6'];
     __VLS_styleScopedClasses['transition-all'];
     __VLS_styleScopedClasses['duration-300'];
     __VLS_styleScopedClasses['hover:-translate-y-1'];
@@ -204,10 +228,30 @@ function __VLS_template() {
     __VLS_styleScopedClasses['hover:-translate-y-1'];
     __VLS_styleScopedClasses['text-xl'];
     __VLS_styleScopedClasses['flex-grow'];
-    __VLS_styleScopedClasses['mt-4'];
     __VLS_styleScopedClasses['flex'];
+    __VLS_styleScopedClasses['flex-col'];
+    __VLS_styleScopedClasses['items-center'];
     __VLS_styleScopedClasses['justify-center'];
-    __VLS_styleScopedClasses['gap-4'];
+    __VLS_styleScopedClasses['w-full'];
+    __VLS_styleScopedClasses['gap-3'];
+    __VLS_styleScopedClasses['sm:flex-row'];
+    __VLS_styleScopedClasses['sm:gap-8'];
+    __VLS_styleScopedClasses['flex-1'];
+    __VLS_styleScopedClasses['sm:flex-initial'];
+    __VLS_styleScopedClasses['px-6'];
+    __VLS_styleScopedClasses['max-w-[200px]'];
+    __VLS_styleScopedClasses['flex-1'];
+    __VLS_styleScopedClasses['sm:flex-initial'];
+    __VLS_styleScopedClasses['px-6'];
+    __VLS_styleScopedClasses['max-w-[200px]'];
+    __VLS_styleScopedClasses['flex-1'];
+    __VLS_styleScopedClasses['sm:flex-initial'];
+    __VLS_styleScopedClasses['px-6'];
+    __VLS_styleScopedClasses['max-w-[200px]'];
+    __VLS_styleScopedClasses['flex'];
+    __VLS_styleScopedClasses['items-center'];
+    __VLS_styleScopedClasses['justify-center'];
+    __VLS_styleScopedClasses['gap-2'];
     var __VLS_slots;
     var __VLS_inheritedAttrs;
     const __VLS_refs = {};
@@ -229,6 +273,7 @@ const __VLS_self = (await import('vue')).defineComponent({
             CardHeader: CardHeader,
             CardTitle: CardTitle,
             Button: Button,
+            GithubIcon: GithubIcon,
             emit: emit,
             displayText: displayText,
         };

@@ -88,7 +88,7 @@ onMounted(() => {
             rel="noopener noreferrer"
             class="flex items-center justify-center gap-2"
           >
-            <GithubIcon size="16" />
+            <GithubIcon :size="16" />
             View Source
           </a>
         </Button>
