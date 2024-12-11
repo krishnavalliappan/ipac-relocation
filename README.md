@@ -1,5 +1,86 @@
-# Vue 3 + TypeScript + Vite
+# IPAC Relocation Plan
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A Vue.js application built in 24 hours to showcase my commitment to joining IPAC Consulting in Woodstock. This project demonstrates both technical capabilities and relocation planning.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black)](https://ipac-relocationplan.vercel.app/)
+
+🔗 **Live Demo:** [ipac-relocationplan.vercel.app](https://ipac-relocationplan.vercel.app/)
+
+## About the Developer
+
+Full-stack developer with expertise in:
+- JavaScript / TypeScript
+- Python
+- Vue.js
+- React
+- Dashboard creation
+- Web automation
+- Interactive applications
+
+## Project Purpose
+
+Built as an innovative response to demonstrate:
+- Technical problem-solving skills
+- Quick learning ability
+- Creative approach to communication
+- Commitment to IPAC's mission in healthcare technology
+
+## Tech Implementation
+
+### Core Stack
+- Vue 3
+- TypeScript
+- Tailwind CSS
+- Radix UI Components
+
+### Features
+- Interactive UI components
+- Responsive design
+- Dark/light theming
+- Smooth transitions
+- Card-based information architecture
+
+## Quick Start
+
+### Prerequisites
+
+- Node.js >= 16
+- npm >= 8
+
+### Setup
+
+```sh
+git clone <repository-url>
+cd ipac-relocation
+npm install
+```
+
+### Development
+
+```sh
+# Start local server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview build
+npm run preview
+```
+
+### Project Structure
+
+```sh
+src/
+├── components/      # Vue components
+│   ├── ui/         # Design system components from shadcn
+│   └── features/   # Main feature components
+├── assets/         # Static files
+├── lib/           # Utilities
+└── App.vue        # Root component
+```
+
+### Deployment
+- Hosted on Vercel
+- Continuous deployment from main branch
+- Zero-configuration setup

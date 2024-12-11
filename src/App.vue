@@ -2,6 +2,7 @@
 import Intro from './components/Intro.vue'
 import TravelMap from './components/TravelMap.vue'
 import RelocationPlan from './components/RelocationPlan.vue'
+import ToggleDark from './components/ToggleDark.vue'
 
 const scrollToMap = () => {
   const mapElement = document.getElementById('travel-map')
@@ -16,6 +17,9 @@ const scrollToRelocation = () => {
 
 <template>
   <main class="snap-container">
+    <div class="fixed z-50 top-4 right-4 sm:top-6 sm:right-6">
+      <ToggleDark />
+    </div>
     <section class="snap-section">
       <Intro 
         @navigate-to-map="scrollToMap"
@@ -33,20 +37,32 @@ const scrollToRelocation = () => {
   </main>
 </template>
 
-<style>
+<!-- App.vue -->
+<style scoped>
+/* Base container styles */
 .snap-container {
   height: 100vh;
-  overflow-y: scroll;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth; /* Add smooth scrolling */
 }
 
-/* Only enable snap scrolling on desktop */
+.snap-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Section styling */
+.snap-section {
+  width: 100%;
+}
+
+/* Desktop only: Enable snap scrolling */
 @media (min-width: 768px) {
   .snap-container {
     scroll-snap-type: y mandatory;
   }
-
+  
   .snap-section {
     height: 100vh;
     scroll-snap-align: start;
@@ -54,19 +70,17 @@ const scrollToRelocation = () => {
   }
 }
 
-.snap-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
-
-.snap-section {
-  min-height: 100vh;
-  overflow-y: auto;
-}
-
-/* Mobile adjustments */
+/* Mobile specific styles */
 @media (max-width: 767px) {
-  .snap-section {
+  .snap-container {
     height: auto;
+    overflow-y: visible;
+  }
+  
+  .snap-section {
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 2rem;
   }
 }
 </style>

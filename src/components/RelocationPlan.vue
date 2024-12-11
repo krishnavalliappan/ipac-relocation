@@ -42,45 +42,49 @@ const planItems = [
 </script>
 
 <template>
-  <div class="h-screen flex flex-col max-w-7xl mx-auto px-4 py-4 overflow-y-auto">
-    <!-- Title Section -->
-    <div class="text-center mb-4">
-      <h2 class="text-3xl sm:text-4xl font-bold text-primary">Relocation Plan 🏠</h2>
-      <p class="text-muted-foreground mt-2">Answers to Your Questions</p>
-    </div>
+  <div class="flex items-center justify-center min-h-screen px-4 py-8">
+    <div class="flex flex-col items-center w-full gap-8 max-w-7xl">
+      <!-- Title Section -->
+      <div class="text-center">
+        <h2 class="text-3xl font-bold sm:text-4xl text-primary">Relocation Plan 🏠</h2>
+        <p class="mt-2 text-muted-foreground">Answers to Your Questions</p>
+      </div>
 
-    <!-- Bento Grid -->
-    <div class="flex-grow overflow-y-auto">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(150px,auto)] pb-4">
-        <template v-for="(item, index) in planItems" :key="index">
-          <Card 
-            :class="[
-              'transition-all duration-300 hover:-translate-y-1 h-full',
-              {
-                'sm:row-span-2': item.size === 'large',
-                'sm:col-span-2 lg:col-span-2': item.size === 'medium',
-                'flex flex-col': true
-              }
-            ]"
-          >
-            <CardHeader class="pb-3">
-              <CardTitle class="flex items-center gap-2 text-lg">
-                <span class="text-2xl">{{ item.icon }}</span>
-                {{ item.title }}
-              </CardTitle>
-            </CardHeader>
-            <CardContent class="flex-grow">
-              <p class="text-muted-foreground">{{ item.content }}</p>
-            </CardContent>
-          </Card>
-        </template>
+      <!-- Bento Grid -->
+      <div class="flex-grow w-full">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[minmax(150px,auto)]">
+          <template v-for="(item, index) in planItems" :key="index">
+            <Card 
+              :class="[
+                'transition-all duration-300 hover:-translate-y-1 h-full',
+                {
+                  'sm:row-span-2': item.size === 'large',
+                  'sm:col-span-2 lg:col-span-2': item.size === 'medium',
+                  'flex flex-col': true
+                }
+              ]"
+            >
+              <CardHeader class="pb-3">
+                <CardTitle class="flex items-center gap-2 text-lg">
+                  <span class="text-2xl">{{ item.icon }}</span>
+                  {{ item.title }}
+                </CardTitle>
+              </CardHeader>
+              <CardContent class="flex-grow">
+                <p class="text-muted-foreground">{{ item.content }}</p>
+              </CardContent>
+            </Card>
+          </template>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
-.grid {
-  grid-auto-rows: minmax(150px, auto);
+<style>
+@media (min-width: 780px) and (max-width: 1030px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>
