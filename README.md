@@ -6,6 +6,37 @@ A Vue.js application built in 24 hours to showcase my commitment to joining IPAC
 
 🔗 **Live Demo:** [ipac-relocationplan.vercel.app](https://ipac-relocationplan.vercel.app/)
 
+## Screenshots
+
+<table>
+  <tr>
+    <td width="50%">
+      <img 
+        src="https://raw.githubusercontent.com/krishnavalliappan/ipac-relocation/main/public/screenshots/light_mode.png" 
+        alt="Light Mode Screenshot"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+      />
+      <div style="display:none;padding:20px;text-align:center;">
+        📷 Light Mode Screenshot<br>
+        <small>(Loading failed - Please check repository)</small>
+      </div>
+      <p align="center">Light Mode</p>
+    </td>
+    <td width="50%">
+      <img 
+        src="https://raw.githubusercontent.com/krishnavalliappan/ipac-relocation/main/public/screenshots/dark_mode.png"
+        alt="Dark Mode Screenshot"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
+      />
+      <div style="display:none;padding:20px;text-align:center;">
+        📷 Dark Mode Screenshot<br>
+        <small>(Loading failed - Please check repository)</small>
+      </div>
+      <p align="center">Dark Mode</p>
+    </td>
+  </tr>
+</table>
+
 ## About the Developer
 
 Full-stack developer with expertise in:
