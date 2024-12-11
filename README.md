@@ -16,10 +16,6 @@ A Vue.js application built in 24 hours to showcase my commitment to joining IPAC
         alt="Light Mode Screenshot"
         onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
       />
-      <div style="display:none;padding:20px;text-align:center;">
-        📷 Light Mode Screenshot<br>
-        <small>(Loading failed - Please check repository)</small>
-      </div>
       <p align="center">Light Mode</p>
     </td>
     <td width="50%">
@@ -28,10 +24,6 @@ A Vue.js application built in 24 hours to showcase my commitment to joining IPAC
         alt="Dark Mode Screenshot"
         onerror="this.style.display='none';this.nextElementSibling.style.display='block';"
       />
-      <div style="display:none;padding:20px;text-align:center;">
-        📷 Dark Mode Screenshot<br>
-        <small>(Loading failed - Please check repository)</small>
-      </div>
       <p align="center">Dark Mode</p>
     </td>
   </tr>
